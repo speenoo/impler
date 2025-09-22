@@ -164,7 +164,7 @@ export function useDataGrid({ limit }: IDataGridProps) {
     (record) => api.updateRecord(uploadInfo._id, record),
     {
       onError(error: IErrorObject) {
-        console.error('Update record error:', error);
+        // console.error('Update record error:', error);
         notifier.showError({
           message: error.message || 'Failed to update record',
           title: 'Update Error',
@@ -217,7 +217,7 @@ export function useDataGrid({ limit }: IDataGridProps) {
       });
     },
     onError(error: IErrorObject) {
-      console.error('Delete records error:', error);
+      // console.error('Delete records error:', error);
       notifier.showError({
         message: error.message || 'Failed to delete records',
         title: 'Delete Error',
