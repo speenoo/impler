@@ -154,7 +154,9 @@ export function memoize<T extends (...args: any[]) => any>(fn: T): T {
   return function (this: any, ...args: Parameters<T>): ReturnType<T> {
     const key = JSON.stringify(args);
     if (cache.has(key)) {
-      return cache.get(key)!;
+      const cachedResult = cache.get(key);
+
+      return cachedResult as ReturnType<typeof fn>;
     }
     const result = fn.apply(this, args);
     cache.set(key, result);
