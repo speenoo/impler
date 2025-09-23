@@ -4,9 +4,9 @@
     "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {
-    }
-  },
-  "types": [
-    "node"
-  ]
+    },
+    "types": [
+      "node"
+    ]
+  }
 }
