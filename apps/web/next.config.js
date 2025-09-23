@@ -1,14 +1,5 @@
 /** @type {import('next').NextConfig} */
-let withSentryConfig;
-try {
-  /*
-   * Make Sentry optional; avoid wrapping when DSN is not provided or package has issues.
-   * This helps prevent runtime jsxDEV errors coming from the Sentry wrapper in certain envs.
-   */
-  withSentryConfig = require('@sentry/nextjs').withSentryConfig;
-} catch (e) {
-  withSentryConfig = (config) => config;
-}
+const { withSentryConfig } = require('@sentry/nextjs');
 
 const nextConfig = {
   reactStrictMode: true,
@@ -31,6 +22,4 @@ const nextConfig = {
   },
 };
 
-// Only enable Sentry wrapper if DSN is provided; otherwise export plain config
-const useSentry = !!process.env.SENTRY_DSN;
-module.exports = useSentry ? withSentryConfig(nextConfig) : nextConfig;
+module.exports = withSentryConfig(nextConfig);
