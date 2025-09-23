@@ -28,6 +28,6 @@ ENV NEXT_TELEMETRY_DISABLED=1
 ENV NX_SKIP_NX_CACHE=true
 
 RUN pnpm i
-# RUN pnpm build
+RUN pnpm --filter @impler/web build
 
-CMD ["pnpm", "start:static:web"]
+CMD ["pnpm", "start:static:build"]
