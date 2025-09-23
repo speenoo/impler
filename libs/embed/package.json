@@ -11,7 +11,7 @@
     "lint": "eslint src",
     "lint:fix": "pnpm lint --fix",
     "prebuild": "rimraf dist",
-    "build": "tsc && cross-env ENVIRONMENT=local rollup -c rollup.config.js",
+    "build": "tsc && rollup -c rollup.config.js",
     "build:dev": "tsc && cross-env ENVIRONMENT=dev rollup -c rollup.config.js -w",
     "build:prod": "tsc && cross-env ENVIRONMENT=production rollup -c rollup.config.js",
     "start:dev": "node index.js",

@@ -1,0 +1,35 @@
+# Security
+JWT_SECRET=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWUsImlhdCI6MTUxNjIzOTAyMn0.KMUFsIDTnFmyG3nMiGM6H9FNFUROf3wh7SmqJp-QV30
+
+NODE_ENV=prod
+PORT=3000
+RABBITMQ_CONN_URL=amqp://LKgtwYnfyhLAwW7d:idqauqMxM64TGyHkRl9sgJeEMjtoQy~s@rabbitmq.railway.internal:5672
+
+# Database
+MONGO_URL=mongodb://mongo:GdCOjQQaCHJQqKoIGFbCmFAlBRxHpwrZ@mongodb.railway.internal:27017
+
+# Storage
+STORAGE_TYPE=s3
+S3_REGION=us-east-1
+S3_BUCKET_NAME=csv-impler
+AWS_ACCESS_KEY_ID=0048c5efca225740000000007
+AWS_SECRET_ACCESS_KEY=K0040rVSBTYqrNXb+St4jVEt+8/cowI
+
+AZURE_STORAGE_CONNECTION_STRING=
+AZURE_STORAGE_CONTAINER=
+
+# Analytics
+SENTRY_DSN=
+
+# URLs
+WIDGET_BASE_URL=https://api-copy-1-production.up.railway.app
+WEB_BASE_URL=https://impler-web.vercel.app
+
+# Github
+COOKIE_DOMAIN=impler-web.vercel.app
+GITHUB_OAUTH_REDIRECT=
+GITHUB_OAUTH_CLIENT_ID=
+GITHUB_OAUTH_CLIENT_SECRET=
+
+# Code Execution
+EXECUTION_MODE=UNSANDBOXED
